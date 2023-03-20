@@ -1,4 +1,6 @@
 import { gql, useQuery } from '@apollo/client';
+import { RouterProvider } from 'react-router-dom';
+import Router from './router';
 
 function App() {
    const HEALTH_CHECK = gql`
@@ -9,7 +11,12 @@ function App() {
       }
    `;
    useQuery(HEALTH_CHECK);
-   return <div className='App'></div>;
+   const { logoutRouter, loginRouter } = Router();
+   return (
+      <>
+         <RouterProvider router={logoutRouter} />
+      </>
+   );
 }
 
 export default App;

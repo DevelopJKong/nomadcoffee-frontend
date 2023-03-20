@@ -3,7 +3,7 @@ module.exports = {
       includes: ['./src/**/*.{tsx,ts}'],
       tagName: 'gql',
       service: {
-         name: 'nomadcoffee-backend',
+         name: 'home-work',
          url: 'http://localhost:5000/graphql',
       },
    },
