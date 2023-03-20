@@ -6,13 +6,19 @@ declare module 'styled-components' {
       bgColor: string;
       fontColor: string;
       borderColor: string;
-      color: {
-         dark: string;
+      colors: {
+         tomato: string;
+         white: string;
+         black: string;
       };
       fontSize: {
          small: string;
          medium: string;
          large: string;
+      };
+      social: {
+         naver: string;
+         kakao: string;
       };
    }
 }

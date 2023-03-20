@@ -1,5 +1,5 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
+import 'react-toastify/dist/ReactToastify.css';
 import App from './app';
 import { client } from './apollo';
 import { QueryClient, QueryClientProvider } from 'react-query';
@@ -11,15 +11,14 @@ import { ToastContainer } from 'react-toastify';
 const queryClient = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
-   <React.StrictMode>
+   <ApolloProvider client={client}>
       <QueryClientProvider client={queryClient}>
-         <ApolloProvider client={client}>
-            <HelmetProvider>
-               <ReactQueryDevtools initialIsOpen={true} />
-               <App />
-               <ToastContainer />
-            </HelmetProvider>
-         </ApolloProvider>
+         <HelmetProvider>
+            <ReactQueryDevtools initialIsOpen={true} />
+            <App />
+            <ToastContainer />
+         </HelmetProvider>
       </QueryClientProvider>
-   </React.StrictMode>,
+      ,
+   </ApolloProvider>,
 );
