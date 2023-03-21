@@ -6,13 +6,13 @@ import FormError from '../../components/auth/form-error.component';
 import AuthLayout from '../../components/auth/auth-layout.component';
 import FormBox from '../../components/auth/form-box.component';
 import { Input, Logo } from '../../components/shard';
-import { loginMutation, loginMutationVariables } from '../../__generated__/loginMutation';
 import Separator from '../../components/auth/separator.component';
 import routes from '../../common/constants/routes.constant';
 import BottomBox from '../../components/auth/button-box.component';
 import Button from './../../components/auth/button.component';
 import { toast } from 'react-toastify';
 import { logUserIn } from '../../apollo';
+import { loginMutation, loginMutationVariables } from '../../__generated__/loginMutation';
 
 interface IForm {
    email: string;

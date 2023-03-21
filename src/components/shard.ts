@@ -60,8 +60,10 @@ export interface IForm {
 }
 
 export interface ISignUpForm extends IForm {
-   firstName: string;
-   lastName: string;
+   location: string;
    username: string;
+   name: string;
    confirmationPassword: string;
+   avatarUrl?: string;
+   githubUsername?: string;
 }
