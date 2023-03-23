@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { faCompass } from '@fortawesome/free-regular-svg-icons';
 import Avatar from './avatar.component';
+import { logUserOut } from '../apollo';
+import { useNavigate } from 'react-router-dom';
 
 const SHeader = styled.div`
    width: 100%;
@@ -53,7 +55,11 @@ const IconContainer = styled.div`
 
 const Header = () => {
    const { data } = useUser();
-
+   const navigate = useNavigate();
+   const onLogOutClick = () => {
+      logUserOut();
+      navigate('/');
+   };
    return (
       <SHeader>
          <Wrapper>
@@ -71,7 +77,7 @@ const Header = () => {
                      <FontAwesomeIcon icon={faCompass} size='lg' />
                   </IconWrapper>
                </Icon>
-               <Icon>
+               <Icon onClick={onLogOutClick}>
                   <Avatar isLarge={true} url={data?.me?.user?.avatar} />
                </Icon>
             </IconContainer>
