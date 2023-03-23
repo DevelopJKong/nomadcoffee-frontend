@@ -10,6 +10,7 @@ declare module 'styled-components' {
          tomato: string;
          white: string;
          black: string;
+         gray: string;
       };
       fontSize: {
          small: string;

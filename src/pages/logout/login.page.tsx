@@ -7,7 +7,7 @@ import AuthLayout from '../../components/auth/auth-layout.component';
 import FormBox from '../../components/auth/form-box.component';
 import { Input, Logo } from '../../components/shard';
 import Separator from '../../components/auth/separator.component';
-import routes from '../../common/constants/routes.constant';
+import { routes } from '../../common/constants/routes.constant';
 import BottomBox from '../../components/auth/button-box.component';
 import Button from './../../components/auth/button.component';
 import { toast } from 'react-toastify';
@@ -93,9 +93,7 @@ const Login = () => {
    });
 
    const onValid = ({ email, password }: IForm) => {
-      if (loading) {
-         return;
-      }
+      if (loading) return;
       loginMutation({
          variables: {
             loginInput: {

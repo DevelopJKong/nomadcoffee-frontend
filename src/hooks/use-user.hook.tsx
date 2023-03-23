@@ -7,7 +7,7 @@ const ME_QUERY = gql`
       me {
          user {
             username
-            avatar
+            avatarUrl
          }
       }
    }

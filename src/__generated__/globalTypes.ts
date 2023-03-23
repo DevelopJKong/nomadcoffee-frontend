@@ -17,9 +17,24 @@ export interface CreateAccountInput {
   githubUsername?: string | null;
 }
 
+export interface CreateCoffeeShopInput {
+  name: string;
+  latitude: string;
+  longitude: string;
+  categoryName: string;
+}
+
 export interface LoginInput {
   email: string;
   password: string;
+}
+
+export interface SeeCoffeeShopInput {
+  id: number;
+}
+
+export interface SeeCoffeeShopsInput {
+  page?: number | null;
 }
 
 //==============================================================

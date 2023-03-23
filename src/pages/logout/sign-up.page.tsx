@@ -9,7 +9,7 @@ import Separator from '../../components/auth/separator.component';
 import FormError from '../../components/auth/form-error.component';
 import Button from './../../components/auth/button.component';
 import BottomBox from '../../components/auth/button-box.component';
-import routes from '../../common/constants/routes.constant';
+import { routes } from '../../common/constants/routes.constant';
 import { gql, useMutation } from '@apollo/client';
 import { createAccountMutation, createAccountMutationVariables } from '../../__generated__/createAccountMutation';
 import { toast } from 'react-toastify';

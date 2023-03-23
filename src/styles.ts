@@ -9,6 +9,7 @@ export const lightTheme: DefaultTheme = {
       tomato: 'tomato',
       white: '#FAFAFA',
       black: '#2c2c2c',
+      gray: '#b2bec3',
    },
    fontSize: {
       small: '12px',
@@ -30,6 +31,7 @@ export const darkTheme: DefaultTheme = {
       tomato: 'tomato',
       white: '#FAFAFA',
       black: '#2c2c2c',
+      gray: '#b2bec3',
    },
    fontSize: {
       small: '12px',
@@ -57,6 +59,7 @@ export const GlobalStyles = createGlobalStyle`
         color: ${({ theme }) => theme.fontColor};
     }
     a {
+      color:inherit;
       text-decoration: none;
     }
 `;
