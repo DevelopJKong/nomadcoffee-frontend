@@ -67,3 +67,7 @@ export interface ISignUpForm extends IForm {
    avatarUrl?: string;
    githubUsername?: string;
 }
+
+export interface IChildren {
+   children: React.ReactNode;
+}
